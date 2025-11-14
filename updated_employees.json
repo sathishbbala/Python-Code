@@ -1,0 +1,77 @@
+{
+    "company": "TechNova Solutions",
+    "employees": [
+        {
+            "id": 101,
+            "name": "Alice Johnson",
+            "department": "Engineering",
+            "skills": [
+                "Python",
+                "Django",
+                "Docker",
+                "CI/CD"
+            ],
+            "salary": 95000,
+            "projects": [
+                {
+                    "name": "Project Atlas",
+                    "status": "Completed"
+                },
+                {
+                    "name": "Project Borealis",
+                    "status": "In Progress"
+                }
+            ]
+        },
+        {
+            "id": 102,
+            "name": "Bob Smith",
+            "department": "Marketing",
+            "skills": [
+                "SEO",
+                "Analytics"
+            ],
+            "salary": 70000,
+            "projects": [
+                {
+                    "name": "Campaign Alpha",
+                    "status": "Completed"
+                }
+            ]
+        },
+        {
+            "id": 103,
+            "name": "Carol Lee",
+            "department": "Engineering",
+            "skills": [
+                "Python",
+                "FastAPI",
+                "Kubernetes",
+                "CI/CD"
+            ],
+            "salary": 105000,
+            "projects": [
+                {
+                    "name": "Project Atlas",
+                    "status": "Completed"
+                },
+                {
+                    "name": "Project Nova",
+                    "status": "Not Started"
+                }
+            ]
+        },
+        {
+            "id": 104,
+            "name": "David Park",
+            "department": "Engineering",
+            "skills": [
+                "Go",
+                "Kubernetes",
+                "CI/CD"
+            ],
+            "salary": 99000,
+            "projects": []
+        }
+    ]
+}

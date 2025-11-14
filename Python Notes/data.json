@@ -1,0 +1,39 @@
+{
+  "company": "TechNova Solutions",
+  "location": "Chennai",
+  "employees": [
+    {
+      "id": 101,
+      "name": "Alice",
+      "age": 28,
+      "department": "Engineering",
+      "skills": ["Python", "SQL", "FastAPI"],
+      "address": {
+        "city": "Chennai",
+        "zip": "600001"
+      }
+    },
+    {
+      "id": 102,
+      "name": "Bob",
+      "age": 32,
+      "department": "Marketing",
+      "skills": ["SEO", "Content Writing"],
+      "address": {
+        "city": "Bangalore",
+        "zip": "560001"
+      }
+    },
+    {
+      "id": 103,
+      "name": "Charlie",
+      "age": 26,
+      "department": "Engineering",
+      "skills": ["Java", "Spring", "AWS"],
+      "address": {
+        "city": "Chennai",
+        "zip": "600002"
+      }
+    }
+  ]
+}

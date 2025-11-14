@@ -93,8 +93,3 @@ reference[0] = 10
 print(original)  # [10, 2, 3]
 print(reference)  # [10, 2, 3]
 # Both reference and original point to the same list in memory
-
-
-
-
-
