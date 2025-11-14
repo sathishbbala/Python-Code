@@ -1,0 +1,87 @@
+Tuple is an ordered, immutable sequence in Python
+1. Ordered (keeps the original order)
+2. Immutable (cannot modify after creation)
+3. Can contain mixed data types
+4. Faster than lists
+5. Can be used as dictionary keys (lists cannot)
+
+# Basic Tuple
+t = (1,2,3)
+t = (1, "hello", 3.5, (4,5))   
+t = 1, 2, 3  # Parentheses are optional
+t = ()       # Empty tuple
+t = (5,)     # Single element tuple (note the comma)
+
+# Accessing Tuple Elements
+t = (10, 20, 30, 40, 50)
+print(t[0])    # 10
+print(t[3])    # 40
+print(t[-1])   # 50
+print(t[-3])   # 30
+
+# Immutability
+t = (1, 2, 3)
+# t[0] = 10  # This will raise a TypeError
+# However, you can create a new tuple by concatenation
+t1 = (1, 2, 3)
+t2 = t1 + (4, 5)
+print(t2)  # (1, 2, 3, 4, 5)
+
+
+# Tuple Methods
+t = (1, 2, 3, 2, 4, 2)
+print(t.count(2))   # 3 (counts occurrences of 2)
+print(t.index(3))   # 2 (index of first occurrence of 3)
+
+# Tuple Unpacking
+t = (10, 20, 30)
+a, b, c = t
+print(a)  # 10
+print(b)  # 20
+print(c)  # 30
+
+# Nested Tuples
+t = (1, (2, 3), (4, 5, 6))
+print(t[1])      # (2, 3)
+print(t[1][0])   # 2
+print(t[2][2])   # 6
+
+# Tuple as Dictionary Keys
+my_dict = { (1, 2): "Point A", (3, 4): "Point B" }
+print(my_dict[(1, 2)])  # Point A
+
+# Tuple Functions
+t = (5, 2, 9, 1, 5, 6)
+print(len(t))        # 6
+print(min(t))        # 1
+print(max(t))        # 9
+print(sorted(t))     # [1, 2, 5, 5, 6, 9]
+
+# Converting List to Tuple
+lst = [1, 2, 3, 4]
+t = tuple(lst)
+print(t)  # (1, 2, 3, 4)
+# Converting Tuple to List
+t = (1, 2, 3, 4)
+lst = list(t)
+print(lst)  # [1, 2, 3, 4]
+
+# When to use Tuples instead of Lists
+# 1. When the data should not change (immutability)
+# 2. When you need a faster data structure
+# 3. When you need to use the data as dictionary keys
+
+# Looping through a Tuple
+t = (10, 20, 30, 40)
+for item in t:
+    print(item)
+# Tuple Slicing
+# How does tuple slicing work in Python?
+# Slicing allows you to extract a portion of a tuple by specifying a start index, an end index, and an optional step.
+# The syntax for slicing is: tuple[start:end:step]  
+
+t = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+print(t[2:5])    # (2, 3, 4)
+print(t[:4])     # (0, 1, 2, 3)
+print(t[5:])     # (5, 6, 7, 8, 9)
+print(t[::2])   # (0, 2, 4, 6, 8)
