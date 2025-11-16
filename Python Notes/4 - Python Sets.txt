@@ -1,0 +1,24 @@
+A set in Python:
+1. Unordered (no index, no position)
+2. Mutable ( you can add/remove)
+3. Unique items only (Duplicates are automatically removed)
+4. Super fast for membership checks (in operator)
+
+# How to create a set
+
+# Adding items
+
+# Removing items 
+
+# Membership Test
+
+# Mathematical operations sets support mathematical operations like Union and Intersection
+# Difference Items in set A but not in set B
+# Symmetric difference Items not common
+
+
+# Set comprehension 
+
+# Use Set to store only immutable and hashable items
+# int, float, string, tuple are allowed in a set
+# List, dict, set are not allowed

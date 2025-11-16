@@ -12,6 +12,7 @@ for employee in data["employees"]:
 
 
 #TODO #3: Print a list of unique skills possessed by employees
+# Set is used so the duplicates are automatically removed 
 unique_skills = set()
 for employee in data["employees"]:
     for skill in employee["skills"]:
