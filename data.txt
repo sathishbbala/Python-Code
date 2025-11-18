@@ -1,0 +1,5 @@
+Amazon | alan@testmail.com | 12345 
+Facebook | alan@testmail.com | Yahoo123 
+Ebay | alan@testmail.com | junk123 
+shopify | alan@testmail.com | yahoo123 
+Myntra | allenp@gmail.com | xdsH8nugznd$ 
