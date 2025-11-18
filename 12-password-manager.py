@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
-from random import shuffle, choice, randint 
+from random import shuffle, choice
 
 # Generate a 12 character password with atleast 1 upper case 1 spl char and a number
 def generate_password():
@@ -11,15 +11,14 @@ def generate_password():
     password_letters=[]
     password=""
     for i in range(0,9):
-        password_letters.append(choice(letters))
-    password_letters.append(choice(letters).upper())
-    password_letters.append(choice(numbers))
-    password_letters.append(choice(special_chars))
+        password_letters.append(choice(letters))     #8 Lower case characters
+    password_letters.append(choice(letters).upper()) # 1 upper case
+    password_letters.append(choice(numbers))         # 1 numeric
+    password_letters.append(choice(special_chars))   # 1 special character
     shuffle(password_letters)
     password = "".join(password_letters)
     password_entry.insert(0, password)
     
-
 
 #save password
 def save():
@@ -72,6 +71,5 @@ generate_password_button = Button(text = "Generate Password", command = generate
 generate_password_button.grid(row = 3, column = 2)
 add_button = Button(text = "Add", width = 36, command = save)
 add_button.grid(row = 4, column = 1, columnspan = 2)
-
 
 window.mainloop()
