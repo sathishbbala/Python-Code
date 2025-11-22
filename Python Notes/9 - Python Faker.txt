@@ -1,0 +1,14 @@
+faker is a python library that generates fake but realistic data
+
+It can generate:
+1. Names, email addresses, phone numbers
+2. Addresses, dates
+3. credit cards, URLs
+4. json like structured data
+
+To generate a fake date between a time period, 2 possible methods: 
+
+use strings like:
+"today", "-1d", "-6m", "-1y", "+10d"
+OR 
+date(2020, 01, 01) -- import datetime module 

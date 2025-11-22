@@ -1,5 +1,5 @@
 import pandas
-data = pandas.read_csv('Squirrel_Data.csv')
+data = pandas.read_csv('data/Squirrel_Data.csv')
 print(data['Primary Fur Color'])
 print(data[data['Primary Fur Color']])
 print(data)
@@ -18,4 +18,4 @@ data_dict = {
     'Count': [gray_squirrel_count, red_squirrel_count, black_squirrel_count]}
 
 df = pandas.DataFrame(data_dict)
-df.to_csv('squirrel_count.csv')
+df.to_csv('data/squirrel_count.csv')

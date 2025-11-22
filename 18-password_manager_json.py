@@ -39,13 +39,13 @@ def save():
         is_ok = messagebox.askokcancel(title = website, message = f"Saving Email as {email} and Password as {password} for the website {website}")
         if is_ok:
             try:
-                with open('data.json', "r") as data_file:
+                with open('data/data.json', "r") as data_file:
                     data = json.load(data_file)
             except (json.JSONDecodeError,FileNotFoundError):
                 data={}
             finally:
                 data.update(new_data)
-                with open('data.json', "w") as data_file:
+                with open('data/data.json', "w") as data_file:
                     json.dump(data, data_file, indent=4)
                 website_entry.delete(0, END)
                 password_entry.delete(0, END)
@@ -54,7 +54,7 @@ def save():
 def find_password():
     website = website_entry.get()
     try:
-        with open("data.json", "r") as data_file:
+        with open("data/data.json", "r") as data_file:
             data = json.load(data_file)
     except (FileNotFoundError, json.JSONDecodeError):
         messagebox.showinfo(title="Error", message="File not found or JSON File is empty. Please check!")

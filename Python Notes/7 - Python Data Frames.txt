@@ -1,0 +1,99 @@
+
+# Roadmap (10 incremental steps)
+
+1. **Foundations** — Series, DataFrame creation, indexing, selecting, basic stats (we executed this step).
+2. **IO** — CSV/Excel/JSON/SQL read & write, parsing options, dtype control.
+3. **Indexing & Slicing** — `.loc`, `.iloc`, boolean masks, `.at`, `.iat`, setting/resetting index.
+4. **Missing data & types** — detect, drop, fill, forward/backward fill, dtype conversions.
+5. **Transformations** — add/remove columns, apply/map/lambda, vectorised ops, `assign`.
+6. **Grouping & Aggregation** — `groupby`, aggregations, pivot_table, crosstab.
+7. **Merging & Reshaping** — `merge`, `concat`, join types, melt, pivot, wide↔long.
+8. **Time series** — datetime dtype, resample, shift, rolling/window functions.
+9. **Performance & scaling** — categorical dtypes, chunked IO, memory profiling, use of `numpy` & `cython` ideas, Dask overview.
+10. **Real projects** — ETL examples, data cleaning pipelines, feature engineering for ML, exporting.
+
+You’ll work one step at a time; I’ll provide explanation, runnable examples, common pitfalls, and exercises for each step. I started with Step 1 for you — see details next.
+
+---
+
+# Step 1 — Foundations (what I ran and why)
+
+**Concepts covered**
+
+* `Series` — a 1-D labeled array (like a single column with index).
+* `DataFrame` — 2-D tabular data structure (rows + columns).
+* Ways to create DataFrames:
+
+  * From dict-of-lists (columns),
+  * From list-of-dicts (rows),
+  * From CSV text (simulate `pd.read_csv`).
+* Basic selection:
+
+  * `df['col']` (column),
+  * `df.iloc[pos]` (row by integer position),
+  * `df.set_index('col')` + `df.loc[label]` (row by label).
+* Quick summary and info: `df.describe()`, `df.info()`.
+* A toy grouping example (revenue = price * qty) and grouping by product.
+
+**I executed runnable code** (created and displayed small DataFrames). I also displayed the examples using a tabular viewer so you can inspect them.
+
+What I showed:
+
+* A `Series` displayed as a small table.
+* `df_cols` — people (name, age, city).
+* `df_rows` — products (product, price, qty).
+* `df_csv` — CSV parsed to DataFrame (id, score, passed).
+* Example selections printed (column, row by position, row by label).
+* `df_csv.describe()` output and `df_csv.info()` output.
+* Example exercise results: product revenue grouped by product (displayed).
+
+---
+
+# Code summary (what I executed)
+
+I created:
+
+* `s = pd.Series([10,20,30], index=['a','b','c'])`
+* `df_cols = DataFrame({...})` (3 rows: Alice, Bob, Charlie)
+* `df_rows = DataFrame([...])` (products A,B,C)
+* `df_csv = pd.read_csv(StringIO(...))` (four rows)
+* Showed `.iloc`, `.loc`, `.describe()`, `.info()` and a `groupby` example for revenue.
+
+If you want the exact code cell I ran, tell me and I’ll paste it here — or I can run modified examples you request.
+
+---
+
+# Exercises (Step 1) — do these to practice
+
+1. Create a DataFrame for 5 employees with columns: `emp_id, name, dept, salary`.
+2. From that employees DataFrame, select only employees with `salary > 50000`.
+3. Add a new column `annual_bonus` that is `0.10 * salary`.
+4. Create/read a CSV with some missing values and show how to detect them (`isnull()`, `notnull()`, `sum()` etc.).
+5. Using the `df_rows` products DataFrame, compute `revenue = price * qty` and group by `product` to get total revenue (I already showed an example result for this).
+
+If you want, I can:
+
+* Run these exercises for you and show results (I can execute code now), **or**
+* Provide step-by-step solutions with explanation (no execution), **or**
+* Move on to Step 2 (IO) with explanations and examples.
+
+---
+
+# Quick tips & common pitfalls (for beginners)
+
+* When creating DataFrames from dicts, the keys become column names; list lengths must match.
+* `df['col']` returns a Series; `df[['col1','col2']]` returns a DataFrame.
+* `.loc` is label-based, `.iloc` is integer-position-based — confusing them causes wrong rows/columns.
+* `df.info()` shows dtypes and null counts; important to catch strings that should be numeric.
+* Use vectorised ops (like `df['a'] + df['b']`) — avoid Python loops over rows for speed.
+
+---
+
+What's next? I’ll proceed however you prefer. I recommend one of these immediate options (pick one; no need to reply with clarifying questions if you don't want to — just pick):
+
+A) I run the **Step 1 exercises** now and show solutions.
+B) Move to **Step 2 (IO)** now — show `read_csv`/`to_csv`, parse dates, dtype control, chunks.
+C) Continue Step 1 with deeper topics: indexing edge cases, boolean masks, chained assignment problems.
+D) I generate a small downloadable notebook with Step 1 + exercises pre-filled.
+
+Say which option you want (A/B/C/D) or just say “go ahead with Step 2” and I’ll continue — or I can run exercise solutions right away.
