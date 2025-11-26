@@ -1,0 +1,16 @@
+
+Python String Methods
+
+.capitalize 
+.lower
+.upper
+.center
+.count('') - counts the occurrence of a character in the string
+.index('') - returns the position of the first occurrence of the character in a string
+.find('') -         
+.replace
+.split
+.isalnum
+.isnumeric
+.islower
+.isupper

@@ -15,3 +15,4 @@ with open("data/employees_higher_salaries.csv", "w", newline="") as csv_file_2:
     writer.writerows(employee_high_salary)
 
 print(employee_high_salary[0].keys())
+print(employee_high_salary)

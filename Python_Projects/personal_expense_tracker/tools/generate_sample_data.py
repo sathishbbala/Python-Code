@@ -5,8 +5,8 @@ import csv
 faker = Faker("en_US") # setting US to get localized data
 
 class DataGenerator:
-    def GenerateEmployee(self, num_records):
-        with open("employees.csv", "w", newline="") as csv_file: 
+    def generate_employees_csv(self, num_records):
+        with open("database/seed_data/employees.csv", "w", newline="") as csv_file: 
             field_names=["name", "email", "job_title", "salary", "start_date"]
             writer = csv.DictWriter(csv_file, fieldnames=field_names)
             writer.writeheader()
@@ -20,15 +20,10 @@ class DataGenerator:
                  }
                 writer.writerow(employee_record)
 
-    def GenerateCategories(self):
+    def generate_categories_csv(self):
         categories = ["Travel","Meals","Accommodation","Software","Hardware","Training","Taxi","Internet","Office Supplies","Team Event"]
-        with open("categories.csv", "w", newline="") as csv_file: 
+        with open("database/seed_data/categories.csv", "w", newline="") as csv_file: 
             writer = csv.writer(csv_file)
             writer.writerow(["category"])
             for category in categories: 
                 writer.writerow([category])
-
-    
-
-
-

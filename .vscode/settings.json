@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./Python_Projects/personal_expense_tracker/Tools"
+    ]
+}

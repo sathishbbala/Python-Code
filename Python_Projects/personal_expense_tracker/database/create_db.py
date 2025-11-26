@@ -2,8 +2,8 @@ import sqlite3
 
 # create employees, categories and expenses tables
 class CreateSQLTables:
-    def CreateTables(self):
-        conn = sqlite3.connect("expense_tracker.db")
+    def create_tables(self):
+        conn = sqlite3.connect("database/expense_tracker.db")
         cursor = conn.cursor()
         cursor.execute("""
         CREATE TABLE IF NOT EXISTS employees (emp_id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, job_title TEXT, salary INTEGER, hire_date DATE)

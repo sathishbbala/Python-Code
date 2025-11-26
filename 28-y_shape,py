@@ -1,0 +1,8 @@
+
+def print_y_pattern(size):
+    for i in range(size):
+        for j in range(size):
+            print("#", end="")
+        print()
+
+print_y_pattern(5)
