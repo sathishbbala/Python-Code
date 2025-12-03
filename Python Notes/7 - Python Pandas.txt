@@ -5,7 +5,6 @@ It is used to:
 1. Load data (CSV, Excel, SQL, JSON, etc.)
 2. Clean data
 3. Filter / transform data
-
 4. Analyze and summarize data
 5. Create tables (row/column format)
 6. Handle missing or messy data
@@ -24,13 +23,10 @@ How to write a df into a csv file?
 df.to_csv()
 
 How to iterate through rows in a data frame? 
-1. use iterows - Simple but slow for very large data frames
-   access columns using row["name"]
+1. use iterows - Simple but slow for very large data frames access columns using row["name"]
 2. intertuples is recommended for speed. access columns using row.age 
 
-
 How to apply a function to a row? 
-
 
 
 Roadmap (10 incremental steps)

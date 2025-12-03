@@ -1,5 +1,7 @@
 {
     "python.analysis.extraPaths": [
         "./Python_Projects/personal_expense_tracker/Tools"
-    ]
+    ],
+    "python-envs.pythonProjects": [],
+    "python-envs.defaultEnvManager": "ms-python.python:system"
 }

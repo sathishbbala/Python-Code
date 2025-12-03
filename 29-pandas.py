@@ -4,8 +4,8 @@ import pandas as pd
 # Load into pandas 
 df = pd.read_csv("data/expense_transactions.csv")
 print(df.head())
-print(df.loc[df["expense_amount"].idxmax()]) # Gets the highest expense amount 
-
+print(df.loc[df["expense_amount"].idxmax()]) # idxmax Gets the highest expense amount and loc fetches the full row
+    
 # use this to learn pandas 
 df["expense_date"] = pd.to_datetime(df["expense_date"]) # converts to date time data type 
 df["year_month"] = df["expense_date"].dt.to_period("M")
