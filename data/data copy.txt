@@ -1,0 +1,3 @@
+Amazon | alan@testmail.com | 12345 
+Facebook | alan@testmail.com | Yahoo123 
+Ebay | alan@testmail.com | junk123 
