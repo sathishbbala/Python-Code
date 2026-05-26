@@ -17,7 +17,7 @@ import pandas
 #            temperatures.append(int(row[1]))
 #    print(temperatures)
 
-data = pandas.read_csv('weather_data.csv')  
+data = pandas.read_csv('data\weather_data.csv')  
 print(type(data))
 print(type(data['temp']))
 temp_list = data['temp'].to_list()
