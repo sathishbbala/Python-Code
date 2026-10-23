@@ -24,7 +24,3 @@ messages['length'].plot.hist(bins=50)
 # Show histogram of message lengths, separated by label concluding spam and ham spam messages are longer on average
 messages.hist(column='length', by='label', bins=50, figsize=(12,4))
 plt.show()
-
-
-
-+91 96771 64626 Jeevitha
